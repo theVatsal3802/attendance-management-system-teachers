@@ -2,8 +2,9 @@
     package="com.example.attendance_admin_panel">
    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+   <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="attendance_admin_panel"
+        android:label="IIIT Kota Attendance Admin"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
