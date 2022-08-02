@@ -137,6 +137,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   CustomContainer(
                     icon: Icons.person,
                     child: TextFormField(
+                      key: const ValueKey("name"),
                       textCapitalization: TextCapitalization.words,
                       decoration: const InputDecoration(
                           border: InputBorder.none,
@@ -162,6 +163,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 CustomContainer(
                   icon: Icons.email,
                   child: TextFormField(
+                    key: const ValueKey("email"),
                     autocorrect: false,
                     textCapitalization: TextCapitalization.none,
                     keyboardType: TextInputType.emailAddress,
@@ -192,6 +194,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 CustomContainer(
                   icon: Icons.security,
                   child: TextFormField(
+                    key: const ValueKey("password"),
                     textCapitalization: TextCapitalization.none,
                     validator: (value) {
                       if (value!.isEmpty) {

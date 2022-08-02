@@ -30,6 +30,9 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
         (_) => checkEmailVerified(),
       );
     }
+    else {
+      Navigator.of(context).pushReplacementNamed(DashBoardScreen.routeName);
+    }
   }
 
   Future<void> sendVerificationEmail() async {
