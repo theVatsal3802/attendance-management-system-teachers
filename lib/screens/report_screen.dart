@@ -42,7 +42,10 @@ class _ReportScreenState extends State<ReportScreen> {
               "No Attendance Taken on specified day",
               textScaleFactor: 1,
             ),
-            content: const Text("Please change the date and try again"),
+            content: const Text(
+              "Please change the date and try again",
+              textScaleFactor: 1,
+            ),
             actions: [
               TextButton(
                 onPressed: () {
@@ -131,6 +134,7 @@ class _ReportScreenState extends State<ReportScreen> {
                           onPressed: setDate,
                           child: const Text(
                             "Set Date",
+                            textScaleFactor: 1,
                           ),
                         ),
                       ],
@@ -154,6 +158,7 @@ class _ReportScreenState extends State<ReportScreen> {
                           onPressed: setDate,
                           child: const Text(
                             "Set Date",
+                            textScaleFactor: 1,
                           ),
                         ),
                       ],

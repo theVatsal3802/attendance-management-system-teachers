@@ -16,7 +16,7 @@ class VerifyEmailScreen extends StatefulWidget {
 class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
   bool isEmailVerified = false;
   bool canResendEmail = false;
-  Timer? timer;
+  late Timer timer;
   User? user = FirebaseAuth.instance.currentUser;
 
   @override
@@ -67,7 +67,7 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
   @override
   void dispose() {
     super.dispose();
-    timer!.cancel();
+    timer.cancel();
   }
 
   Future<void> checkEmailVerified() async {
@@ -76,7 +76,7 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
       isEmailVerified = FirebaseAuth.instance.currentUser!.emailVerified;
     });
     if (isEmailVerified) {
-      timer!.cancel();
+      timer.cancel();
     }
   }
 

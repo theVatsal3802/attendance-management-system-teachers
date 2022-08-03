@@ -128,7 +128,10 @@ class _QRGeneratorScreenState extends State<QRGeneratorScreen> {
         }
         return Scaffold(
           appBar: AppBar(
-            title: const Text("Generate QR Code to take attendance"),
+            title: const Text(
+              "Generate QR Code to take attendance",
+              textScaleFactor: 1,
+            ),
           ),
           body: Stack(
             alignment: Alignment.center,
@@ -182,10 +185,9 @@ class _QRGeneratorScreenState extends State<QRGeneratorScreen> {
                               },
                               textCapitalization: TextCapitalization.characters,
                               decoration: const InputDecoration(
-                                hintText: "Eg: CST101, etc",
-                                contentPadding: EdgeInsets.all(10),
-                                border: InputBorder.none
-                              ),
+                                  hintText: "Eg: CST101, etc",
+                                  contentPadding: EdgeInsets.all(10),
+                                  border: InputBorder.none),
                             ),
                           ),
                           VerticalSizedBox(height: height * 0.02),

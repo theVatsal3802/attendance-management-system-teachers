@@ -85,7 +85,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
-                child: const Text("OK"),
+                child: const Text(
+                  "OK",
+                  textScaleFactor: 1,
+                ),
               ),
             ],
           );

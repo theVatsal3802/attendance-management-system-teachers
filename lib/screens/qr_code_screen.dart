@@ -62,6 +62,7 @@ class QRCodeScreen extends StatelessWidget {
               },
               label: const Text(
                 "Complete Attendance",
+                textScaleFactor: 1,
               ),
             ),
           ],
