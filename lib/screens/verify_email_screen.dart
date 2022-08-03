@@ -16,7 +16,7 @@ class VerifyEmailScreen extends StatefulWidget {
 class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
   bool isEmailVerified = false;
   bool canResendEmail = false;
-  late Timer timer;
+  Timer timer = Timer(const Duration(seconds: 0), () {});
   User? user = FirebaseAuth.instance.currentUser;
 
   @override
