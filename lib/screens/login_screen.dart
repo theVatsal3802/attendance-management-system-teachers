@@ -57,6 +57,10 @@ class _LoginScreenState extends State<LoginScreen> {
           },
         );
       }
+      setState(() {
+        _isLoading = false;
+      });
+      Navigator.of(context).pushReplacementNamed(DashBoardScreen.routeName);
     } on FirebaseAuthException catch (error) {
       var msg = "An Error Occurred! Please Try Again";
       if (error.code == "invalid-email") {
@@ -94,11 +98,34 @@ class _LoginScreenState extends State<LoginScreen> {
           );
         },
       );
-    } finally {
-      setState(() {
-        _isLoading = false;
-      });
-      Navigator.of(context).pushReplacementNamed(DashBoardScreen.routeName);
+    } catch (error) {
+      var msg = "Please Try Again!";
+      showDialog(
+        context: context,
+        builder: (ctx) {
+          return AlertDialog(
+            title: const Text(
+              "An Error Occurred",
+              textScaleFactor: 1,
+            ),
+            content: Text(
+              msg,
+              textScaleFactor: 1,
+            ),
+            actions: [
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: const Text(
+                  "OK",
+                  textScaleFactor: 1,
+                ),
+              ),
+            ],
+          );
+        },
+      );
     }
   }
 
