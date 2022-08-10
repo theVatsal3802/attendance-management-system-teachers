@@ -58,9 +58,6 @@ class _LoginScreenState extends State<LoginScreen> {
           },
         );
       }
-      setState(() {
-        _isLoading = false;
-      });
       Navigator.of(context).pushReplacementNamed(DashBoardScreen.routeName);
     } on FirebaseAuthException catch (error) {
       var msg = "An Error Occurred! Please Try Again";
@@ -127,6 +124,10 @@ class _LoginScreenState extends State<LoginScreen> {
           );
         },
       );
+    } finally {
+      setState(() {
+        _isLoading = false;
+      });
     }
   }
 
